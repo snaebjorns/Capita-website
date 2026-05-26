@@ -153,6 +153,31 @@
             stroke: var(--teal-green); fill: none; stroke-width: 1.5;
             stroke-linecap: round; stroke-linejoin: round;
         }
+        /* AI block inside Services */
+        .ai-block { margin-top: 72px; }
+        .ai-heading {
+            font-size: 1.6rem; margin-bottom: 24px;
+            padding-bottom: 16px; border-bottom: 1px solid rgba(40,80,80,0.08);
+        }
+        .ai-intro { max-width: 720px; margin-bottom: 40px; }
+        .ai-intro p {
+            font-size: 0.95rem; line-height: 1.8;
+            margin-bottom: 14px; text-align: left;
+        }
+        .ai-offers {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .ai-offer {
+            padding: 24px; background: var(--off-white);
+            border-left: 2px solid var(--teal-green);
+        }
+        .ai-offer h4 {
+            font-size: 1rem; margin-bottom: 6px;
+            color: var(--deep-teal); font-weight: 600;
+        }
+        .ai-offer p {
+            font-size: 0.85rem; line-height: 1.6; color: rgb(80, 95, 95);
+        }
 
         /* ===== TEAM ===== */
         .team { background: var(--off-white); }
@@ -172,36 +197,14 @@
             font-size: 0.78rem; color: var(--teal-green); font-weight: 500;
             letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px;
         }
-        .tm-bio { font-size: 0.88rem; line-height: 1.7; text-align: justify; }
+        .tm-bio { font-size: 0.88rem; line-height: 1.7; text-align: left; }
         .tm-cred {
             margin-top: 14px; padding-top: 14px;
             border-top: 1px solid rgba(40,80,80,0.08);
             font-size: 0.8rem; color: var(--muted-sage); text-align: left;
         }
 
-        /* ===== AI ADVISORY ===== */
-        .ai { background: var(--white); }
-        .ai-intro {
-            max-width: 720px; margin-bottom: 56px;
-        }
-        .ai-intro p {
-            font-size: 1rem; line-height: 1.8; margin-bottom: 14px; text-align: justify;
-        }
-        .ai-offers {
-            display: grid; grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .ai-offer {
-            padding: 24px; background: var(--off-white);
-            border-left: 2px solid var(--teal-green);
-        }
-        .ai-offer h4 {
-            font-size: 1rem; margin-bottom: 6px;
-            color: var(--deep-teal); font-weight: 600;
-        }
-        .ai-offer p {
-            font-size: 0.85rem; line-height: 1.6; color: rgb(80, 95, 95);
-        }
+        /* ===== AI ADVISOR GRID (in Team) ===== */
         .ai-team-grid {
             display: grid; grid-template-columns: repeat(2, 1fr);
             gap: 48px; max-width: 820px; margin: 64px auto 0;
@@ -293,7 +296,6 @@
         <div class="nav-right">
             <a href="#about" class="nav-link"><span data-lang="is">Um okkur</span><span data-lang="en">About</span></a>
             <a href="#services" class="nav-link"><span data-lang="is">Þjónusta</span><span data-lang="en">Services</span></a>
-            <a href="#ai" class="nav-link"><span data-lang="is">AI Ráðgjöf</span><span data-lang="en">AI Advisory</span></a>
             <a href="#team" class="nav-link"><span data-lang="is">Teymið</span><span data-lang="en">Team</span></a>
             <div class="lang-sw">
                 <button class="on" onclick="setLang('is')">IS</button>
@@ -374,33 +376,28 @@
                 <p><span data-lang="is">Öflun og ráðgjöf varðandi verkábyrgðir og fjárhagslegar tryggingar fyrir verktaka og verkkaupa.</span><span data-lang="en">Procurement and advisory on performance bonds and financial guarantees for contractors and project owners.</span></p>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- AI ADVISORY -->
-<section class="sec ai" id="ai">
-    <div class="wrap">
-        <div class="sec-label"><span data-lang="is">AI Ráðgjöf</span><span data-lang="en">AI Advisory</span></div>
-        <h2 class="sec-title"><span data-lang="is">Gervigreind í rekstri</span><span data-lang="en">AI in business</span></h2>
-        <div class="sec-line"></div>
-        <div class="ai-intro">
-            <p data-lang="is">Við aðstoðum fyrirtæki við að nýta gervigreind í rekstri. Allt frá þarfagreiningu og vali á lausnum yfir í uppsetningu í öruggu umhverfi.</p>
-            <p data-lang="is">Teymið okkar hefur reynslu af innleiðingu á fullbúinni AI lausn fyrir lögfræðistofu, og samhliða því þekkingu úr verkfræði og rekstri til að tryggja að lausnirnar skili raunverulegum árangri í daglegum rekstri.</p>
-            <p data-lang="en">We help companies put AI to work. Everything from needs assessment and solution selection through deployment in a secure environment.</p>
-            <p data-lang="en">Our team has delivered a turnkey AI solution for a law firm, combined with backgrounds in engineering and operations to ensure the solutions deliver real value in day-to-day operations.</p>
-        </div>
-        <div class="ai-offers">
-            <div class="ai-offer">
-                <h4><span data-lang="is">Þarfagreining</span><span data-lang="en">Needs assessment</span></h4>
-                <p><span data-lang="is">Greining á verkferlum og tækifærum til sjálfvirkni og umbóta með gervigreind.</span><span data-lang="en">Mapping workflows and opportunities for automation and improvement with AI.</span></p>
+        <div class="ai-block">
+            <h3 class="ai-heading"><span data-lang="is">AI Ráðgjöf</span><span data-lang="en">AI Advisory</span></h3>
+            <div class="ai-intro">
+                <p data-lang="is">Við aðstoðum fyrirtæki við að nýta gervigreind í rekstri. Allt frá þarfagreiningu og vali á lausnum yfir í uppsetningu í öruggu umhverfi.</p>
+                <p data-lang="is">Teymið okkar hefur reynslu af innleiðingu á fullbúinni AI lausn fyrir lögfræðistofu, og samhliða því þekkingu úr verkfræði og rekstri til að tryggja að lausnirnar skili raunverulegum árangri í daglegum rekstri.</p>
+                <p data-lang="en">We help companies put AI to work. Everything from needs assessment and solution selection through deployment in a secure environment.</p>
+                <p data-lang="en">Our team has delivered a turnkey AI solution for a law firm, combined with backgrounds in engineering and operations to ensure the solutions deliver real value in day-to-day operations.</p>
             </div>
-            <div class="ai-offer">
-                <h4><span data-lang="is">Lausnaval & uppsetning</span><span data-lang="en">Solution & deployment</span></h4>
-                <p><span data-lang="is">Val á réttri tæknilausn, uppsetning í öruggu umhverfi og samþætting við núverandi kerfi.</span><span data-lang="en">Selecting the right technology, deployment in a secure environment and integration with existing systems.</span></p>
-            </div>
-            <div class="ai-offer">
-                <h4><span data-lang="is">Innleiðing & þjálfun</span><span data-lang="en">Rollout & training</span></h4>
-                <p><span data-lang="is">Þjálfun starfsfólks, mótun verklags og eftirfylgni svo lausnirnar skili árangri.</span><span data-lang="en">Staff training, process design and follow-through so the solutions deliver results.</span></p>
+            <div class="ai-offers">
+                <div class="ai-offer">
+                    <h4><span data-lang="is">Þarfagreining</span><span data-lang="en">Needs assessment</span></h4>
+                    <p><span data-lang="is">Greining á verkferlum og tækifærum til sjálfvirkni og umbóta með gervigreind.</span><span data-lang="en">Mapping workflows and opportunities for automation and improvement with AI.</span></p>
+                </div>
+                <div class="ai-offer">
+                    <h4><span data-lang="is">Lausnaval & uppsetning</span><span data-lang="en">Solution & deployment</span></h4>
+                    <p><span data-lang="is">Val á réttri tæknilausn, uppsetning í öruggu umhverfi og samþætting við núverandi kerfi.</span><span data-lang="en">Selecting the right technology, deployment in a secure environment and integration with existing systems.</span></p>
+                </div>
+                <div class="ai-offer">
+                    <h4><span data-lang="is">Innleiðing & þjálfun</span><span data-lang="en">Rollout & training</span></h4>
+                    <p><span data-lang="is">Þjálfun starfsfólks, mótun verklags og eftirfylgni svo lausnirnar skili árangri.</span><span data-lang="en">Staff training, process design and follow-through so the solutions deliver results.</span></p>
+                </div>
             </div>
         </div>
     </div>
@@ -409,20 +406,30 @@
 <!-- TEAM -->
 <section class="sec team" id="team">
     <div class="wrap">
-        <div class="sec-label"><span data-lang="is">Teymið</span><span data-lang="en">The Team</span></div>
-        <h2 class="sec-title"><span data-lang="is">Stofnendur &amp; Ráðgjafar</span><span data-lang="en">Founders &amp; Advisors</span></h2>
+        <h2 class="sec-title"><span data-lang="is">Teymið</span><span data-lang="en">The Team</span></h2>
         <div class="sec-line"></div>
         <div class="team-grid">
-            <!-- Snæbjörn first -->
+            <!-- Snæbjörn -->
             <div class="tm">
                 <div class="tm-photo"><span>SS</span></div>
                 <h3>Snæbjörn Sigurðsson</h3>
                 <div class="tm-role"><span data-lang="is">Stofnandi & framkvæmdastjóri</span><span data-lang="en">Founder & CEO</span></div>
                 <div class="tm-bio">
-                    <p data-lang="is">Yfir 24 ára reynsla í fjármálageiranum. Gegnt lykilstörfum hjá íslenskum bönkum, þ.m.t. í fjárfestingadeild Íslandsbanka. Hefur komið að mörgum af stærstu fjármögnunarverkefnum undanfarinna ára. Hefur stýrt sölu fjölmargra fyrirtækja og hefur einnig komið að stofnun og uppbyggingu nokkurra nýsköpunarfyrirtækja.</p>
-                    <p data-lang="en">Over 24 years in financial services. Held key roles at Íslandsbanki, including the bank's investment division. Previously Head of Treasury at Byr and in credit and derivatives at Landsbanki Luxembourg and Kaupthing.</p>
+                    <p data-lang="is">Með bakgrunn í fjárfestingum og fjármögnun og hefur leitt fjölda söluferla og fjármögnunarverkefna, meðal annars hjá Íslandsbanka.</p>
+                    <p data-lang="en">Background in investments and financing; has led numerous M&amp;A and financing transactions, including at Íslandsbanki.</p>
                 </div>
                 <div class="tm-cred">MSc Corporate Finance, SDA Bocconi</div>
+            </div>
+            <!-- Þórarinn Óli -->
+            <div class="tm">
+                <div class="tm-photo"><span>ÞÓ</span></div>
+                <h3>Þórarinn Óli Ólafsson</h3>
+                <div class="tm-role"><span data-lang="is">Stofnandi & Ráðgjafi</span><span data-lang="en">Founder & Advisor</span></div>
+                <div class="tm-bio">
+                    <p data-lang="is">Víðtæk reynsla af Fyrirtækja- og fjárfestingarbankasviði Arion banka og Mörkuðum Íslandsbanka.</p>
+                    <p data-lang="en">Extensive experience from Corporate &amp; Investment Banking at Arion Bank and Markets at Íslandsbanki.</p>
+                </div>
+                <div class="tm-cred">MSc Corporate Finance</div>
             </div>
             <!-- Ingi Karl -->
             <div class="tm">
@@ -430,21 +437,10 @@
                 <h3>Ingi Karl Ingólfsson</h3>
                 <div class="tm-role"><span data-lang="is">Ráðgjafi</span><span data-lang="en">Advisor</span></div>
                 <div class="tm-bio">
-                    <p data-lang="is">Yfir 25 ára reynsla í fyrirtækjaráðgjöf og fjármögnun. Rekur Investco ehf. Áður meðeigandi Centra Fyrirtækjaráðgjafar og Arena Wealth Management í Lúxemborg. Umfangsmikil reynsla af söluferlum, fjármögnun og fasteignaverkefnum.</p>
-                    <p data-lang="en">Over 25 years in corporate advisory and financing. Runs Investco ehf. Previously co-owner at Centra Corporate Advisory and Arena Wealth Management in Luxembourg. Extensive experience in sale processes, financing and real estate projects.</p>
+                    <p data-lang="is">Stofnandi Investco ehf. Áður meðeigandi Centra Fyrirtækjaráðgjafar og Arena Wealth Management í Lúxemborg.</p>
+                    <p data-lang="en">Founder of Investco ehf. Previously co-owner of Centra Corporate Advisory and Arena Wealth Management in Luxembourg.</p>
                 </div>
                 <div class="tm-cred"><span data-lang="is">Sérsvið: söluferlar, fjármögnun, fasteignir</span><span data-lang="en">Focus: sale processes, financing, real estate</span></div>
-            </div>
-            <!-- Þórarinn Óli -->
-            <div class="tm">
-                <div class="tm-photo"><span>ÞÓ</span></div>
-                <h3>Þórarinn Óli Ólafsson</h3>
-                <div class="tm-role"><span data-lang="is">Ráðgjafi</span><span data-lang="en">Advisor</span></div>
-                <div class="tm-bio">
-                    <p data-lang="is">Yfir 20 ára reynsla í bankastarfsemi og á fjármálamörkuðum. Yfirmaður fjármagnsmarkaða hjá Arion banka, yfirmaður fjármálasviðs hjá Íslandsbanka og aðstoðarmaður bankastjóra.</p>
-                    <p data-lang="en">Over 20 years in banking and financial markets. Head of Capital Markets at Arion Bank, Head of Finance and Operations at Íslandsbanki and Assistant to the CEO.</p>
-                </div>
-                <div class="tm-cred">MSc Corporate Finance &middot; <span data-lang="is">Löggiltur verðbréfamiðlari</span><span data-lang="en">Certified Securities Broker</span></div>
             </div>
         </div>
         <div class="ai-team-grid">
