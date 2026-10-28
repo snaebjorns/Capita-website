@@ -55,10 +55,6 @@
         img[data-lang="is"] { display: block; }
         body.en img[data-lang="en"] { display: block; }
         body.en img[data-lang="is"] { display: none; }
-        div.hero-services[data-lang="en"] { display: none; }
-        div.hero-services[data-lang="is"] { display: flex; }
-        body.en div.hero-services[data-lang="en"] { display: flex; }
-        body.en div.hero-services[data-lang="is"] { display: none; }
 
         /* ===== NAV ===== */
         nav {
@@ -70,10 +66,10 @@
         }
         nav .wrap {
             max-width: 1200px; margin: 0 auto; padding: 0 32px;
-            display: flex; justify-content: space-between; align-items: center; height: 68px;
+            display: flex; justify-content: flex-end; align-items: center; height: 68px;
         }
-        .nav-logo img { height: 20px; }
-        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 22px; }
+        .nav-logo { display: flex; align-items: center; }
         .nav-right { display: flex; align-items: center; gap: 32px; }
         .nav-right a {
             text-decoration: none; color: var(--deep-teal);
@@ -116,19 +112,15 @@
             position: relative; z-index: 1; width: 100%;
         }
         .hero-content { max-width: 560px; padding: 40px 0 80px; }
-        .hero-logo { height: 56px; width: auto; margin-bottom: 48px; display: block; }
+        .hero-logo { height: 120px; width: auto; margin-bottom: 32px; display: block; }
         .hero h1 {
-            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-size: clamp(2.2rem, 4.5vw, 3.2rem);
             color: var(--deep-teal); margin-bottom: 20px;
             font-weight: 400;
         }
         .hero-line { width: 48px; height: 1px; background: var(--teal-green); margin: 28px 0; }
-        .hero-services {
-            flex-wrap: wrap; gap: 6px 16px;
-            font-size: 0.92rem; color: rgb(60, 90, 85); line-height: 1.9;
-        }
-        .hero-services span.svc-item:not(:last-child)::after {
-            content: '·'; margin-left: 16px; color: var(--muted-sage);
+        .hero p {
+            font-size: 1.05rem; color: rgb(60, 90, 85); max-width: 460px; line-height: 1.8;
         }
 
         /* ===== SECTIONS ===== */
@@ -270,7 +262,7 @@
             .hero-bg { width: 100%; opacity: 0.2; }
             .hero-bg::after { width: 100%; background: linear-gradient(to top, var(--off-white) 5%, transparent 40%); }
             .hero-content { padding: 100px 0 60px; }
-            .hero-logo { height: 48px; }
+            .hero-logo { height: 90px; }
             .nav-right .nav-link { display: none; }
             .burger { display: block; }
             .nav-right.open {
@@ -283,8 +275,8 @@
         }
         @media (max-width: 600px) {
             .sec { padding: 56px 0; }
-            .hero-logo { height: 40px; }
-            .hero h1 { font-size: 1.5rem; }
+            .hero-logo { height: 72px; }
+            .hero h1 { font-size: 1.8rem; }
             .hero p { font-size: 0.95rem; }
             .srv { padding: 28px 20px; }
             .team-grid { gap: 32px; }
@@ -299,8 +291,7 @@
 <!-- NAV -->
 <nav>
     <div class="wrap">
-        <a href="#" class="nav-logo">
-            <img src="logo/CapitaLjóst_transparent.png" alt="Capita">
+        <a href="#" class="nav-logo" style="visibility:hidden;width:0;">
         </a>
         <button class="burger" onclick="document.querySelector('.nav-right').classList.toggle('open')" aria-label="Menu">
             <span></span><span></span><span></span>
@@ -328,22 +319,10 @@
                 <span data-lang="en">Investments and Advisory</span>
             </h1>
             <div class="hero-line"></div>
-            <div class="hero-services" data-lang="is">
-                <span class="svc-item">Fjárfestingar</span>
-                <span class="svc-item">Fjármögnun fyrirtækja</span>
-                <span class="svc-item">Fjárhagsleg endurskipulagning</span>
-                <span class="svc-item">Fasteignir</span>
-                <span class="svc-item">Innviðaverkefni</span>
-                <span class="svc-item">AI ráðgjöf</span>
-            </div>
-            <div class="hero-services" data-lang="en">
-                <span class="svc-item">Investments</span>
-                <span class="svc-item">Corporate financing</span>
-                <span class="svc-item">Financial restructuring</span>
-                <span class="svc-item">Real estate</span>
-                <span class="svc-item">Infrastructure projects</span>
-                <span class="svc-item">AI advisory</span>
-            </div>
+            <p>
+                <span data-lang="is">Fjárfestingar<br>Fjármögnun fyrirtækja<br>Fjárhagsleg endurskipulagning<br>Fasteignir<br>Innviðaverkefni<br>AI ráðgjöf</span>
+                <span data-lang="en">Investments<br>Corporate financing<br>Financial restructuring<br>Real estate<br>Infrastructure projects<br>AI advisory</span>
+            </p>
         </div>
     </div>
 </section>
