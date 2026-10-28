@@ -83,7 +83,9 @@
             padding: 5px 12px; border: none; background: transparent;
             font-family: var(--font-body); font-size: 0.78rem; font-weight: 500;
             color: var(--deep-teal); cursor: pointer; letter-spacing: 0.06em;
+            display: flex; align-items: center; gap: 4px;
         }
+        .lang-flag { font-size: 0.9rem; }
         .lang-sw button.on { background: var(--deep-teal); color: var(--off-white); }
 
         .burger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
@@ -112,15 +114,19 @@
             position: relative; z-index: 1; width: 100%;
         }
         .hero-content { max-width: 560px; padding: 40px 0 80px; }
-        .hero-logo { height: 120px; width: auto; margin-bottom: 32px; display: block; }
+        .hero-logo { height: 80px; width: auto; margin-bottom: 40px; display: block; }
         .hero h1 {
-            font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+            font-size: clamp(1.8rem, 3.5vw, 2.4rem);
             color: var(--deep-teal); margin-bottom: 20px;
             font-weight: 400;
         }
         .hero-line { width: 48px; height: 1px; background: var(--teal-green); margin: 28px 0; }
-        .hero p {
-            font-size: 1.05rem; color: rgb(60, 90, 85); max-width: 460px; line-height: 1.8;
+        .hero-services {
+            display: flex; flex-wrap: wrap; gap: 6px 16px;
+            font-size: 0.92rem; color: rgb(60, 90, 85); line-height: 1.9;
+        }
+        .hero-services span.svc-item:not(:last-child)::after {
+            content: '·'; margin-left: 16px; color: var(--muted-sage);
         }
 
         /* ===== SECTIONS ===== */
@@ -262,7 +268,7 @@
             .hero-bg { width: 100%; opacity: 0.2; }
             .hero-bg::after { width: 100%; background: linear-gradient(to top, var(--off-white) 5%, transparent 40%); }
             .hero-content { padding: 100px 0 60px; }
-            .hero-logo { height: 90px; }
+            .hero-logo { height: 68px; }
             .nav-right .nav-link { display: none; }
             .burger { display: block; }
             .nav-right.open {
@@ -275,7 +281,7 @@
         }
         @media (max-width: 600px) {
             .sec { padding: 56px 0; }
-            .hero-logo { height: 72px; }
+            .hero-logo { height: 56px; }
             .hero h1 { font-size: 1.8rem; }
             .hero p { font-size: 0.95rem; }
             .srv { padding: 28px 20px; }
@@ -301,8 +307,8 @@
             <a href="#services" class="nav-link"><span data-lang="is">Þjónusta</span><span data-lang="en">Services</span></a>
             <a href="#team" class="nav-link"><span data-lang="is">Teymið</span><span data-lang="en">Team</span></a>
             <div class="lang-sw">
-                <button class="on" onclick="setLang('is')">IS</button>
-                <button onclick="setLang('en')">EN</button>
+                <button class="on" onclick="setLang('is')"><span class="lang-flag">🇮🇸</span> IS</button>
+                <button onclick="setLang('en')"><span class="lang-flag">🇬🇧</span> EN</button>
             </div>
         </div>
     </div>
@@ -319,10 +325,22 @@
                 <span data-lang="en">Investments and Advisory</span>
             </h1>
             <div class="hero-line"></div>
-            <p>
-                <span data-lang="is">Fjárfestingar<br>Fjármögnun fyrirtækja<br>Fjárhagsleg endurskipulagning<br>Fasteignir<br>Innviðaverkefni<br>AI ráðgjöf</span>
-                <span data-lang="en">Investments<br>Corporate financing<br>Financial restructuring<br>Real estate<br>Infrastructure projects<br>AI advisory</span>
-            </p>
+            <div class="hero-services" data-lang="is">
+                <span class="svc-item">Fjárfestingar</span>
+                <span class="svc-item">Fjármögnun fyrirtækja</span>
+                <span class="svc-item">Fjárhagsleg endurskipulagning</span>
+                <span class="svc-item">Fasteignir</span>
+                <span class="svc-item">Innviðaverkefni</span>
+                <span class="svc-item">AI ráðgjöf</span>
+            </div>
+            <div class="hero-services" data-lang="en">
+                <span class="svc-item">Investments</span>
+                <span class="svc-item">Corporate financing</span>
+                <span class="svc-item">Financial restructuring</span>
+                <span class="svc-item">Real estate</span>
+                <span class="svc-item">Infrastructure projects</span>
+                <span class="svc-item">AI advisory</span>
+            </div>
         </div>
     </div>
 </section>
