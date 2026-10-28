@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAPITA Advisory</title>
+    <title>Capita Investments</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -177,7 +177,7 @@
 
         /* ===== TEAM ===== */
         .team { background: var(--off-white); }
-        .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+        .team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; max-width: 820px; margin: 0 auto; }
         .tm { text-align: center; }
         .tm-photo {
             width: 180px; height: 180px; border-radius: 50%;
@@ -203,8 +203,14 @@
         /* ===== AI ADVISOR GRID (in Team) ===== */
         .ai-team-grid {
             display: grid; grid-template-columns: repeat(2, 1fr);
-            gap: 48px; max-width: 820px; margin: 64px auto 0;
+            gap: 48px; max-width: 820px; margin: 0 auto;
         }
+        .team-sub { max-width: 820px; margin: 72px auto 36px; padding-top: 36px; border-top: 1px solid rgba(40,80,80,0.12); }
+        .team-sub.first { margin-top: 0; padding-top: 0; border-top: none; }
+        .team-sub h3 { font-size: 1.1rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-green); margin-bottom: 0; }
+        .adv-grid .tm-photo { width: 130px; height: 130px; margin-bottom: 18px; }
+        .adv-grid .tm-photo span { font-size: 1.7rem; }
+        .adv-grid .tm h3 { font-size: 1.25rem; }
 
         /* ===== CONTACT ===== */
         .contact { background: var(--deep-teal); color: var(--off-white); }
@@ -251,6 +257,7 @@
             .srv-grid { grid-template-columns: 1fr; }
             .team-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
             .ai-team-grid { grid-template-columns: 1fr; max-width: 400px; }
+            .team-sub { max-width: 400px; }
             .ai-offers { grid-template-columns: 1fr; }
             .hero-bg { width: 100%; opacity: 0.2; }
             .hero-bg::after { width: 100%; background: linear-gradient(to top, var(--off-white) 5%, transparent 40%); }
@@ -306,16 +313,15 @@
     <div class="hero-bg"><img src="hofdi_sketch.png" alt="Höfði"></div>
     <div class="wrap">
         <div class="hero-content">
-            <img src="logo/CapitaRadgjofLjost_transparent.png" alt="Capita Ráðgjöf" class="hero-logo" data-lang="is">
-            <img src="logo/CapitaAdvisoryLjóst_transparent.png" alt="Capita Advisory" class="hero-logo" data-lang="en">
+            <img src="logo/CapitaInvestmentsLjóst_transparent.png" alt="Capita Investments" class="hero-logo">
             <h1>
-                <span data-lang="is">Óháð fyrirtækjaráðgjöf</span>
-                <span data-lang="en">Independent corporate advisory</span>
+                <span data-lang="is">Fjárfestingar og ráðgjöf</span>
+                <span data-lang="en">Investments and Advisory</span>
             </h1>
             <div class="hero-line"></div>
             <p>
-                <span data-lang="is">Ráðgjöf á sviði fjármögnunar fyrirtækja, fasteigna og innviðaverkefna.</span>
-                <span data-lang="en">Advisory focused on financing of companies, real estate and infrastructure projects.</span>
+                <span data-lang="is">Fjárfestingar<br>Fjármögnun fyrirtækja<br>Fjárhagsleg endurskipulagning<br>Fasteignir<br>Innviðaverkefni<br>AI ráðgjöf</span>
+                <span data-lang="en">Investments<br>Corporate financing<br>Financial restructuring<br>Real estate<br>Infrastructure projects<br>AI advisory</span>
             </p>
         </div>
     </div>
@@ -328,15 +334,15 @@
             <span data-lang="is">Um okkur</span><span data-lang="en">About</span>
         </div>
         <h2 class="sec-title">
-            <span data-lang="is">Reynsla. Traust. Árangur.</span>
-            <span data-lang="en">Experience. Trust. Results.</span>
+            <span data-lang="is">Reynsla, traust, árangur</span>
+            <span data-lang="en">Experience, trust, results</span>
         </h2>
         <div class="sec-line"></div>
         <div class="about-grid">
             <div class="about-text">
-                <p data-lang="is"><span style="font-family:var(--font-heading);font-size:1.22em;">Capita Ráðgjöf</span> er óháð fyrirtækjaráðgjöf. Starfsmenn og ráðgjafar fyrirtækisins búa yfir víðtækri reynslu úr fjármálageiranum.</p>
+                <p data-lang="is"><span style="font-family:var(--font-heading);font-size:1.22em;">Capita Investments</span> er óháð fjárfestinga- og ráðgjafarfyrirtæki. Starfsmenn og ráðgjafar fyrirtækisins búa yfir víðtækri reynslu úr fjármálageiranum.</p>
                 <p data-lang="is">Við sérhæfum okkur í fasteignaráðgjöf, ráðgjöf við kaup og sölu fyrirtækja, fjármögnun, fjárhagslega endurskipulagningu og verkábyrgðir.</p>
-                <p data-lang="en"><span style="font-family:var(--font-heading);font-size:1.22em;">Capita Advisory</span> is an independent corporate advisory firm. Our team and advisors bring extensive experience from the financial sector.</p>
+                <p data-lang="en"><span style="font-family:var(--font-heading);font-size:1.22em;">Capita Investments</span> is an independent investment and advisory firm. Our team and advisors bring extensive experience from the financial sector.</p>
                 <p data-lang="en">We specialize in real estate advisory, M&A advisory, financing, financial restructuring and performance bonds.</p>
             </div>
             <div></div>
@@ -405,23 +411,38 @@
     <div class="wrap">
         <h2 class="sec-title"><span data-lang="is">Teymið</span><span data-lang="en">The Team</span></h2>
         <div class="sec-line"></div>
+        <div class="team-sub first"><h3><span data-lang="is">Eigendur</span><span data-lang="en">Partners</span></h3></div>
         <div class="team-grid">
             <!-- Snæbjörn -->
             <div class="tm">
                 <div class="tm-photo"><span>SS</span></div>
                 <h3>Snæbjörn Sigurðsson</h3>
-                <div class="tm-role"><span data-lang="is">Stofnandi & framkvæmdastjóri</span><span data-lang="en">Founder & CEO</span></div>
+                <div class="tm-role"><span data-lang="is">Eigandi</span><span data-lang="en">Partner</span></div>
                 <div class="tm-bio">
-                    <p data-lang="is">Með bakgrunn í fjárfestingum og fjármögnun og hefur leitt fjölda söluferla og fjármögnunarverkefna, meðal annars hjá Íslandsbanka.</p>
-                    <p data-lang="en">Background in investments and financing; has led numerous M&amp;A and financing transactions, including at Íslandsbanki.</p>
+                    <p data-lang="is">Snæbjörn Sigurðsson er annar stofnanda Capita Investments ehf. Snæbjörn hefur starfað á fjármálamarkaði frá árinu 2000, fyrst í eigin viðskiptum Kaupþings. Á árunum 2005 til 2008 starfaði Snæbjörn hjá Landsbankanum í Lúxemborg sem lánastjóri og síðar við stjórn afleiðuborðs bankans, og á árunum 2009 til 2010 við fjárhagslega endurskipulagningu fyrirtækja hjá Landsbankanum. Á árunum 2010 til 2011 var Snæbjörn forstöðumaður fjárstýringar Byrs hf. og leiddi endurskipulagningu og söluferli félagsins sem lauk með samruna við Íslandsbanka. Á árunum 2011 til 2024 var Snæbjörn fjárfestingastjóri hjá Íslandsbanka þar sem hann stýrði eignasafni skráðra og óskráðra hlutabréfa og fasteignaverkefna. Snæbjörn er með meistaragráðu í Corporate Finance frá SDA Bocconi í Mílanó og BS í viðskiptafræði með áherslu á fjármál frá Háskóla Íslands.</p>
+                    <p data-lang="en">Snæbjörn Sigurðsson is a co-founder of Capita Investments ehf. He has worked in financial markets since 2000, starting in proprietary trading at Kaupthing. From 2005 to 2008 he worked at Landsbanki Luxembourg as a credit manager and later running the bank&#39;s derivatives desk, and in 2009 and 2010 on corporate restructuring at Landsbankinn. From 2010 to 2011 he was Head of Treasury at Byr hf., where he led the restructuring and sale process that ended in the merger with Íslandsbanki. From 2011 to 2024 he was an investment manager at Íslandsbanki, managing a portfolio of listed and unlisted equities and real estate projects. Snæbjörn holds a Master in Corporate Finance from SDA Bocconi in Milan and a BS in Business Administration with a major in finance from the University of Iceland.</p>
                 </div>
-                <div class="tm-cred">MSc Corporate Finance, SDA Bocconi</div>
+                <div class="tm-cred">Master in Corporate Finance, SDA Bocconi &middot; BS <span data-lang="is">í viðskiptafræði, Háskóli Íslands</span><span data-lang="en">Business Administration, University of Iceland</span></div>
             </div>
+            <!-- Sigþór -->
+            <div class="tm">
+                <div class="tm-photo"><span>SJ</span></div>
+                <h3>Sigþór Jónsson</h3>
+                <div class="tm-role"><span data-lang="is">Eigandi</span><span data-lang="en">Partner</span></div>
+                <div class="tm-bio">
+                    <p data-lang="is">Sigþór Jónsson er annar stofnanda Capita Investments ehf. Sigþór hefur starfað á fjármálamarkaði frá árinu 2001, fyrst hjá SPRON og Búnaðarbanka Verðbréf. Á árunum 2004 til 2012 starfaði Sigþór hjá Kaupþingi og Stefni hf., í greiningardeild og sem sjóðstjóri innlendra hlutabréfasjóða og forstöðumaður sérhæfðra fjárfestinga. Á árunum 2012 til 2017 var Sigþór framkvæmdastjóri hjá Landsbréfum hf. og Íslenskum verðbréfum hf. og forstöðumaður hjá Kviku Securities í London 2018 til 2019. Á árunum 2019 til 2022 var Sigþór framkvæmdastjóri jarðvarmafyrirtækisins GEG ehf. og á árunum 2023 til 2025 sérfræðingur í markaðsviðskiptum Arctica Finance. Sigþór er með MBA í structured finance and energy frá EADA í Barcelona og MSc í fjármálum frá Háskóla Íslands.</p>
+                    <p data-lang="en">Sigþór Jónsson is a co-founder of Capita Investments ehf. He has worked in financial markets since 2001, starting at SPRON and Búnaðarbanki Securities. From 2004 to 2012 he worked at Kaupthing and Stefnir hf., in research and as fund manager of domestic equity funds and Head of Specialised Investments. From 2012 to 2017 he was CEO of Landsbréf hf. and Íslensk verðbréf hf., and from 2018 to 2019 a director at Kvika Securities in London. From 2019 to 2022 he was CEO of the geothermal company GEG ehf., and from 2023 to 2025 a specialist in capital markets at Arctica Finance. Sigþór holds an MBA in structured finance and energy from EADA in Barcelona and an MSc in Finance from the University of Iceland.</p>
+                </div>
+                <div class="tm-cred">MSc <span data-lang="is">í fjármálum, Háskóli Íslands</span><span data-lang="en">Finance, University of Iceland</span> &middot; MBA, EADA Barcelona</div>
+            </div>
+        </div>
+        <div class="team-sub"><h3><span data-lang="is">Ráðgjafar</span><span data-lang="en">Advisors</span></h3></div>
+        <div class="team-grid adv-grid">
             <!-- Þórarinn Óli -->
             <div class="tm">
                 <div class="tm-photo"><span>ÞÓ</span></div>
                 <h3>Þórarinn Óli Ólafsson</h3>
-                <div class="tm-role"><span data-lang="is">Stofnandi & Ráðgjafi</span><span data-lang="en">Founder & Advisor</span></div>
+                <div class="tm-role"><span data-lang="is">Ráðgjafi</span><span data-lang="en">Advisor</span></div>
                 <div class="tm-bio">
                     <p data-lang="is">Víðtæk reynsla af Fyrirtækja- og fjárfestingarbankasviði Arion banka og Mörkuðum Íslandsbanka.</p>
                     <p data-lang="en">Extensive experience from Corporate &amp; Investment Banking at Arion Bank and Markets at Íslandsbanki.</p>
@@ -440,7 +461,8 @@
                 <div class="tm-cred"><span data-lang="is">Sérsvið: söluferlar, fjármögnun, fasteignir</span><span data-lang="en">Focus: sale processes, financing, real estate</span></div>
             </div>
         </div>
-        <div class="ai-team-grid">
+        <div class="team-sub"><h3><span data-lang="is">AI ráðgjafar</span><span data-lang="en">AI Advisors</span></h3></div>
+        <div class="ai-team-grid adv-grid">
             <div class="tm">
                 <div class="tm-photo"><span>SA</span></div>
                 <h3>Sigurður Ari Snæbjörnsson</h3>
@@ -474,11 +496,11 @@
                 <p><span data-lang="is">Hafðu samband til að ræða hvernig við getum aðstoðað.</span><span data-lang="en">Reach out to discuss how we can help.</span></p>
                 <div class="ct-row">
                     <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    <a href="mailto:info@capita.is">info@capita.is</a>
+                    <a href="mailto:capita@capita.is">capita@capita.is</a>
                 </div>
                 <div class="ct-row">
                     <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span>Borgartún 26, Reykjavík</span>
+                    <span>Hlíðasmári 6, Kópavogur</span>
                 </div>
             </div>
             <form class="ct-form" onsubmit="event.preventDefault()">
@@ -491,7 +513,7 @@
     </div>
 </section>
 
-<footer><div class="wrap"><p>&copy; 2026 CAPITA Advisory. <span data-lang="is">Allur réttur áskilinn.</span><span data-lang="en">All rights reserved.</span></p></div></footer>
+<footer><div class="wrap"><p>&copy; 2026 Capita Investments. <span data-lang="is">Allur réttur áskilinn.</span><span data-lang="en">All rights reserved.</span><br>Capita Investments ehf. &middot; kt. 551026-2210</p></div></footer>
 
 <script>
 function setLang(l) {
