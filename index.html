@@ -70,10 +70,10 @@
         }
         nav .wrap {
             max-width: 1200px; margin: 0 auto; padding: 0 32px;
-            display: flex; justify-content: flex-end; align-items: center; height: 68px;
+            display: flex; justify-content: space-between; align-items: center; height: 68px;
         }
-        .nav-logo img { height: 22px; }
-        .nav-logo { display: flex; align-items: center; }
+        .nav-logo img { height: 20px; }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
         .nav-right { display: flex; align-items: center; gap: 32px; }
         .nav-right a {
             text-decoration: none; color: var(--deep-teal);
@@ -87,9 +87,7 @@
             padding: 5px 12px; border: none; background: transparent;
             font-family: var(--font-body); font-size: 0.78rem; font-weight: 500;
             color: var(--deep-teal); cursor: pointer; letter-spacing: 0.06em;
-            display: flex; align-items: center; gap: 4px;
         }
-        .lang-flag { font-size: 0.9rem; }
         .lang-sw button.on { background: var(--deep-teal); color: var(--off-white); }
 
         .burger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
@@ -118,9 +116,9 @@
             position: relative; z-index: 1; width: 100%;
         }
         .hero-content { max-width: 560px; padding: 40px 0 80px; }
-        .hero-logo { height: 80px; width: auto; margin-bottom: 40px; display: block; }
+        .hero-logo { height: 56px; width: auto; margin-bottom: 48px; display: block; }
         .hero h1 {
-            font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
             color: var(--deep-teal); margin-bottom: 20px;
             font-weight: 400;
         }
@@ -272,7 +270,7 @@
             .hero-bg { width: 100%; opacity: 0.2; }
             .hero-bg::after { width: 100%; background: linear-gradient(to top, var(--off-white) 5%, transparent 40%); }
             .hero-content { padding: 100px 0 60px; }
-            .hero-logo { height: 68px; }
+            .hero-logo { height: 48px; }
             .nav-right .nav-link { display: none; }
             .burger { display: block; }
             .nav-right.open {
@@ -285,8 +283,8 @@
         }
         @media (max-width: 600px) {
             .sec { padding: 56px 0; }
-            .hero-logo { height: 56px; }
-            .hero h1 { font-size: 1.8rem; }
+            .hero-logo { height: 40px; }
+            .hero h1 { font-size: 1.5rem; }
             .hero p { font-size: 0.95rem; }
             .srv { padding: 28px 20px; }
             .team-grid { gap: 32px; }
@@ -301,7 +299,8 @@
 <!-- NAV -->
 <nav>
     <div class="wrap">
-        <a href="#" class="nav-logo" style="visibility:hidden;width:0;">
+        <a href="#" class="nav-logo">
+            <img src="logo/CapitaLjóst_transparent.png" alt="Capita">
         </a>
         <button class="burger" onclick="document.querySelector('.nav-right').classList.toggle('open')" aria-label="Menu">
             <span></span><span></span><span></span>
@@ -311,8 +310,8 @@
             <a href="#services" class="nav-link"><span data-lang="is">Þjónusta</span><span data-lang="en">Services</span></a>
             <a href="#team" class="nav-link"><span data-lang="is">Teymið</span><span data-lang="en">Team</span></a>
             <div class="lang-sw">
-                <button class="on" onclick="setLang('is')"><span class="lang-flag">🇮🇸</span> IS</button>
-                <button onclick="setLang('en')"><span class="lang-flag">🇬🇧</span> EN</button>
+                <button class="on" onclick="setLang('is')">IS</button>
+                <button onclick="setLang('en')">EN</button>
             </div>
         </div>
     </div>
